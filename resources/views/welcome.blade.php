@@ -20,6 +20,8 @@
         </div>
     </header>
     <main>
+        <h1> Produtos </h1>
+        @include('components.game-card')
         <h1>Battle</h1>
         @include('components.game-cardBATTLE')
 

@@ -27,11 +27,11 @@
         </fieldset>
         <fieldset>
           <label for="value">Valor</label>
-          <input type="number" name="price" id="price" placeholder="Valor do Produto" required>
+          <input type="number" step=".01" name="price" id="price" placeholder="Valor do Produto" required>
           <label for="stock">Quantidade</label>
           <input type="number" name="stock" id="stock" placeholder="Quantidade do Produto" required>
           <label for="image">Imagem do Produto</label>
-          <input type="file" name="image" id="image" >
+          <input required type="file" name="image" id="image" >
         </fieldset>
         <fieldset>
           <label for="description">Descrição</label>

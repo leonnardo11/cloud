@@ -21,6 +21,7 @@
                             alt="Foto do usuário(a) {{ Auth::user()->name }}" title="Foto do usuário(a) {{ Auth::user()->name }}">
                     </div>
                     <div class="userInfo-text">
+                        <p style="color: green; font-size: 20px;" href="">{{session()->get('sucess')}} </p>
                         <h1>Bem-vindo(a), {{ Auth::user()->name }}</h1>
                         <p>{{ Auth::user()->email }}</p>
                         <p>Telefone: {{ Auth::user()->tel }}</p>

@@ -34,7 +34,7 @@
                       <input type="file" name="image" id="image">
                     </fieldset>
                     <button type="submit" class="formButton">Atualizar perfil </button>
-                    <a style="color: green;" href="">{{session()->get('sucess')}} </a>
+                    
                   </form>
                 </div>
               </div>

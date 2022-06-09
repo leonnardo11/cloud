@@ -37,7 +37,7 @@ class PerfilController extends Controller
             'tel' => $request->tel,
         ]);
         session()->flash('sucess', 'Perfil salvo com sucesso.');
-        return redirect()->back();
+        return redirect(route('perfil.index'));
     }
 
 }

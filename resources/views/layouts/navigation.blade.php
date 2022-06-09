@@ -42,7 +42,7 @@
                       <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                   </div>
-                <li><a>Carrinho</a></li>
+                <li><a href="{{ route('cart.index')}}">Carrinho</a></li>
                 <li><a href="{{ route('login') }}" class="">Entrar</a></li>
             @endauth
         @endif

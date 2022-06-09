@@ -13,7 +13,7 @@
 @include('layouts.navigation')
 <div class="main-div">
     <h1>Editar {{$products->name}}</h1>
-    <p>Você está editando o Produto {{$products->name}}. Verifique as Informações antes de salvar</p>
+    <p>Você está editando o Produto {{$products->name}}. Verifique as Informações antes de salvar.</p>
   </div>
 </header>
 <main>
@@ -22,7 +22,8 @@
         <form action="{{route('product.update', $products->id)}}" method="POST" enctype="multipart/form-data">
             @csrf
         <fieldset>
-          <label for="name">Nome Produto</label>
+            <img src="{{asset($products->image)}}">
+          <label for="name">Nome do Produto</label>
           <input type="text" name="name" id="name" value="{{$products->name}}">
         </fieldset>
         <fieldset>
@@ -30,6 +31,7 @@
           <input type="number" name="price" id="price" value="{{$products->price}}">
           <label for="stock">Quantidade</label>
           <input type="text" name="stock" id="stock" value="{{$products->stock}}">
+
           <label for="image">Imagem do Produto</label>
           <input type="file" name="image" id="image" >
         </fieldset>
