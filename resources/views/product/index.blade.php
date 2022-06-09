@@ -17,7 +17,11 @@
             <h1>Produtos</h1>
             <p>Verifique todos os produtos cadastrados no site.</p>
             <p style="color: red; font-shadow: 3px 2x 3x black;"> {{session()->get('noAccess')}} </p>
+            @if (Auth::check())
+                @if(Auth::user()->admin == 1)
             <button type="submit"><a href="{{route('product.create')}}">Criar Produto</a></button>
+            @endif
+            @endif
         </div>
     </header>
     <main>
@@ -31,7 +35,11 @@
                   <th>Nome Produto</th>
                   <th>Valor</th>
                   <th>Quantidade</th>
-                  <th>Ações</th>
+                  @if (Auth::check())
+                     @if(Auth::user()->admin == 1)
+                        <th>Ações</th>
+                    @endif
+                    @endif
                 </tr>
                 @foreach ($products as $product)
                 <tr>
@@ -40,6 +48,8 @@
                     <td>{{$product->name}}</td>
                     <td>R$ {{$product->price}}</td>
                     <td>{{$product->stock}}</td>
+                    @if (Auth::check())
+                      @if(Auth::user()->admin == 1)
                     <td class="actions">
                         <a href="{{ route('product.edit', $product->id) }}">
                             <i class="fas fa-edit"></i>
@@ -49,6 +59,8 @@
                         </a>
                     </td>
                 </tr>
+                @endif
+                @endif
                 @endforeach
               </table>
             @endif

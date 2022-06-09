@@ -7,6 +7,7 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UsuarioController;
 
 
 /*
@@ -43,6 +44,11 @@ Route::middleware(['admin'])->group(function(){
 
     Route::get('/product', [ProductController::class, 'index'])->name('product.index');
     Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
+
+    Route::get('/user', [UsuarioController::class, 'index'])->name('user.index');
+    Route::post('/user', [UsuarioController::class, 'store'])->name('user.create');
+
+
 });
 
 //ROTAS DOS CLIENTES;

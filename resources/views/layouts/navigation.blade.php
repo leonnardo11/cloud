@@ -21,6 +21,7 @@
                     <div class="dropdown-content">
                         <p><a href="{{ route('product.index') }}" class="">Produtos</a></p>
                         <p><a href="{{ route('category.index') }}" class="">Categorias</a></p>
+                        <p><a href="{{ route('user.index') }}" class="">Usuarios</a></p>
                     </div>
                   </div>
                   @endif
