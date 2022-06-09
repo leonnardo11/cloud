@@ -4,7 +4,7 @@
     <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
     </label>
-
+    <img id="logoimg" style="width: 55px;" src="images/coin.png">
     <a href="{{ url('/') }}"><label class="logo">ECOINS</label></a>
     <ul>
         @if (Route::has('login'))
