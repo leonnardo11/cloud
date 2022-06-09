@@ -22,8 +22,10 @@
     <main>
         <h1>Battle</h1>
         @include('components.game-cardBATTLE')
+
         <h1>FPS</h1>
         @include('components.game-cardFPS')
+
         <h1>MOBA</h1>
         @include('components.game-cardMOBA')
     </main>

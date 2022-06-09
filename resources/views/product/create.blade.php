@@ -29,7 +29,7 @@
           <label for="value">Valor</label>
           <input type="number" name="price" id="price" placeholder="Valor do Produto" required>
           <label for="stock">Quantidade</label>
-          <input type="text" name="stock" id="stock" placeholder="Quantidade do Produto" required>
+          <input type="number" name="stock" id="stock" placeholder="Quantidade do Produto" required>
           <label for="image">Imagem do Produto</label>
           <input type="file" name="image" id="image" >
         </fieldset>
@@ -38,13 +38,13 @@
           <textarea maxlength="130" name="description" id="description" cols="30" rows="10"
             placeholder="Descrição do Produto" minlength="1" maxlength="200" required></textarea>
           <label for="category">Categoria:</label>
-          <select name="category_id" id="category">
+          <select name="category_id" id="category" required>
             @foreach($categories as $category)
             <option value="{{$category->id}}">{{ $category->name }}</option>
             @endforeach
         </select>
         </fieldset>
-        <button type="submit">Salvar</button>
+        <button type="submit" class="formButton">Salvar</button>
       </form>
     </div>
   </div>

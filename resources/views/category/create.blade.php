@@ -17,16 +17,18 @@
   </div>
 </header>
 <main>
-  <div class="edit-container">
-    <div class="form-edit">
-        <form action="{{route('category.store')}}" method="POST" enctype="multipart/form-data">
-            @csrf
-
-          <label for="name">Nome da categoria</label>
-          <input type="text" name="name" id="name" placeholder="Nome da categoria" required>
-        <button type="submit">Salvar</button>
-      </form>
-    </div>
-  </div>
+    <div class="edit-container-category">
+        <div class="form-edit">
+            <form action="{{route('category.store')}}" method="POST" enctype="multipart/form-data">
+                @csrf
+              <fieldset class="form-edit-category">
+                <label for="name">Nome da categoria:</label>
+                <input type="text" name="name" id="name" class="inputEdit">
+              <button type="submit" class="formButton">Salvar</button>
+              </fieldset>
+          </form>
+        </div>
+      </div>
 </main>
 @include('layouts.footer')
+

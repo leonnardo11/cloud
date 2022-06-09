@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('tel');
             $table->boolean('client');
             $table->boolean('admin')->default(false);
-            $table->string('image')->default('images/404.png');
+            $table->string('image')->default('images/profile.png');
             $table->rememberToken();
             $table->timestamps();
         });

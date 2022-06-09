@@ -66,8 +66,4 @@
             </section>
             @endif
         </main>
-        <script>
-
-        </script>
-        @include('layouts.footer')
 </body>
