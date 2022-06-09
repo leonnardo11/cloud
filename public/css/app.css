@@ -7,6 +7,9 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
 }
 
 
@@ -198,6 +201,11 @@ label.logo {
 }
 .logo:hover{
     cursor: pointer;
+}
+
+#logoimg{
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 }
 
 nav ul {

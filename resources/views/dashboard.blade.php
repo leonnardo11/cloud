@@ -49,7 +49,7 @@
                         <p>#{{$pedido->order_id}}</p>
                         <p>{{$pedido->created_at->format('d/m/Y')}} </p>
                         <p>{{$pedido->state}}</p>
-                        <p>{{number_format($pedido->price * $pedido->units, 2, '.', ' ')}}</p>
+                        <p>R$ {{number_format($pedido->price * $pedido->units, 2, '.', ' ')}}</p>
                     </summary>
                     <div class="summary-content">
                             <img src="{{asset($pedido->productImage)}}">

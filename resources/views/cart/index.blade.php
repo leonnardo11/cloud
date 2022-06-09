@@ -35,12 +35,15 @@
                 <p style="margin-bottom: 50px"> Por se tratar de moedas digitais, seu envio também é digital, sendo assim confirme o e-mail abaixo, e receba a KEY para ativar as moedas dentro de seu game.</p>
                 <div>
                     <form method="POST" action="{{route('order.store')}}">
+                        @csrf
                     <p>Endereço de Email</p>
                     <input type="text" name="email" placeholder="{{Auth::user()->email}}" required />
                 </div>
-
-                    @csrf
+                @if (count($itens) == true)
                     <button style="margin-top: 20px;" value="{{$total}}" name="total" type="submit">Realizar pedido </button>
+                @else
+                    <button style="margin-top: 20px; color:red;" disabled="disabled" type="submit"> Carrinho vazio </button>
+                @endif
                 </form>
             </div>
            </aside>
